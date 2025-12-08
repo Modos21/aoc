@@ -1,7 +1,6 @@
 use std::convert::Infallible;
 use std::fmt::Display;
 use std::str::FromStr;
-use std::string::ParseError;
 
 pub enum Part {
     One,
