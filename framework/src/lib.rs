@@ -55,7 +55,10 @@ macro_rules! run {
 
 #[macro_export]
 macro_rules! testfile {
-    ($name:literal) => { include_str!(concat!("../test/", $name, ".in")) };
+    ($name:literal) => {
+        include_str!(concat!("../test/", $name, ".in"))
+        .strip_prefix("\u{feff}").unwrap()
+    };
 }
 
 #[macro_export]
@@ -76,6 +79,18 @@ macro_rules! set {
 
     // all elements from src
     ( $var:ident in $src:expr ) => {{ $src.into_iter().collect::<Vec<_>>() }};
+}
+
+#[macro_export]
+macro_rules! do_while {
+    ($body:block while $cond:expr) => {
+        loop {
+            $body
+            if !($cond) {
+                break
+            }
+        }
+    };
 }
 
 #[cfg(test)]
