@@ -1,8 +1,8 @@
+use framework::{run, Part, Solution};
 pub mod task;
 
-use crate::task::Part;
+use day03::task::Day03;
 
 fn main() {
-    let sum = task::run("day03/input/input.txt", Part::Two).expect("Failed to read file");
-    println!("Sum of biggest possible joltages: {sum}")
+    run!(Day03, part1, part2);
 }

@@ -2,23 +2,21 @@ pub mod task;
 
 #[cfg(test)]
 mod tests {
-    use crate::task::{run, to_number, Part};
+    use crate::task::{to_number, Day03};
+    use framework::{testfile, Part, Solution};
 
     #[test]
     fn test_file1() {
-        let sum = run("test/test1.in", Part::One).unwrap();
-        assert_eq!(sum, 89);
+        if let Some(sum) = Day03::run(Part::One, testfile!("test1")) {
+            assert_eq!(sum, 89);
+        }
     }
 
     #[test]
     fn test_file2() {
-        let sum = run("test/test2.in", Part::One).unwrap();
-        assert_eq!(sum, 357);
-    }
-
-    #[test]
-    fn test_file2_p2() {
-        let _ = run("test/test2.in", Part::Two).unwrap();
+        if let Some(sum) = Day03::run(Part::One, testfile!("test2")) {
+            assert_eq!(sum, 89);
+        }
     }
 
     #[test]

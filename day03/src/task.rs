@@ -1,73 +1,55 @@
-use std::fs::File;
-use std::io;
-use std::io::{BufRead, BufReader};
+use framework::Solution;
+use std::convert::Infallible;
+use std::str::FromStr;
 
-pub enum Part {
-    One,
-    Two
-}
+pub struct Day03;
+pub struct Joltages(Vec<Vec<u8>>);
 
-trait Print {
-    fn print(&self);
-}
+impl FromStr for Joltages {
+    type Err = Infallible;
 
-impl Print for Vec<u8> {
-    fn print(&self) {
-        print!("[");
-        if self.len() > 0 {
-            print!("{}", self[0]);
-            for i in 1..self.len() {
-                print!(" {}", self[i]);
-            }
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        let lines: Vec<Vec<char>> = s.lines()
+                .map(|l| l.chars().collect::<Vec<char>>()).collect();
+
+        let mut digits: Vec<Vec<u8>> = Vec::new();
+
+        for mut line in lines {
+            let _digits: Vec<u8> = line.iter_mut()
+                .map(|ch| ch.to_digit(10).unwrap() as u8)
+                .collect();
+            digits.push(_digits);
         }
-        println!("]");
+
+        Ok(Joltages(digits))
     }
 }
 
-pub fn run(file_path: &str, part: Part) -> io::Result<u64> {
-    let reader = BufReader::new(File::open(file_path)?);
+impl Solution for Day03 {
+    type ParsedInput = Joltages;
+    type ResultType = u64;
 
-    let mut sum: u64 = 0;
+    fn part_one(input: Self::ParsedInput) -> Option<Self::ResultType> {
+        let mut sum = 0u64;
 
-    for mut line in reader.lines().map(|line| line.unwrap().chars().collect::<Vec<char>>()) {
-        let digits: Vec<u8> = line.iter_mut()
-            .map(|ch| ch.to_digit(10).unwrap() as u8).collect();
-
-        match part {
-            Part::One => {
-                let (d1, d2) = biggest_2_digits_in_order(digits);
-                println!("biggest digits in order: {}, {}", d1, d2);
-                sum += (10 * d1 + d2) as u64;
-            },
-            Part::Two => {
-                let biggest_digits = biggest_n_digits_in_order(digits, 12);
-                biggest_digits.print();
-                sum += to_number(biggest_digits);
-            },
+        for battery_line in input.0 {
+            let biggest_digits = biggest_n_digits_in_order(battery_line, 2);
+            sum += to_number(biggest_digits);
         }
-    }
-    println!("{sum}");
-    Ok(sum)
-}
 
-pub(crate) fn biggest_2_digits_in_order(digits: Vec<u8>) -> (u8, u8) {
-    let mut largest_idx = 0;
-    let mut d1 = 0;
-    for i in 0..digits.len()-1 {
-        if digits[i] > d1 {
-            d1 = digits[i];
-            largest_idx = i;
-        }
+        Some(sum)
     }
 
-    let mut d2 = 0;
-    for i in largest_idx+1..digits.len() {
-        if digits[i] > d2 {
-            d2 = digits[i];
-        }
-    }
+    fn part_two(input: Self::ParsedInput) -> Option<Self::ResultType> {
+        let mut sum = 0u64;
 
-    (d1, d2)
+        for battery_line in input.0 {
+            let biggest_digits = biggest_n_digits_in_order(battery_line, 12);
+            sum += to_number(biggest_digits);
+        }
+
+        Some(sum)
+    }
 }
 
 pub(crate) fn biggest_n_digits_in_order(digits: Vec<u8>, n: u8) -> Vec<u8> {
