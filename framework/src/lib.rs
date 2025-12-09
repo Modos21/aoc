@@ -9,7 +9,7 @@ pub enum Part {
 
 pub trait Solution {
     type ParsedInput: FromStr<Err = Infallible>;
-    type ResultType: Display + Clone;
+    type ResultType: Display;
 
     fn run(part: Part, input: &str) -> Option<Self::ResultType> {
         let parsed = Self::ParsedInput::from_str(input).expect("Parsing should never fail");
@@ -19,7 +19,7 @@ pub trait Solution {
             Part::Two => ("2", Self::part_two(parsed)),
         };
 
-        match res.clone() {
+        match res.as_ref() {
             None => println!("part {part} not yet implemented!"),
             Some(v) => println!("Part {part} result: {}", v),
         }
