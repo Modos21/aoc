@@ -1,4 +1,4 @@
-﻿use framework::Solution;
+﻿use framework::{do_while, Solution};
 use std::convert::Infallible;
 use std::fmt::{Debug, Formatter};
 use std::str::FromStr;
@@ -25,15 +25,15 @@ impl FromStr for ProductIdRanges {
         for line in s.lines() {
             l += 1;
 
-            println!("line = {line:?}");
-
             if line.contains("-") {
                 let (a, b) = line.split_once("-").unwrap();
                 let from = a.parse::<u64>()
                     .expect(&format!("Failed to parse {} in line {} to u64", a, l));
                 let to = b.parse::<u64>()
                     .expect(&format!("Failed to parse {} in line {} to u64", b, l));
-                ranges.push(Range(from, to));
+                let range = Range(from, to);
+                //println!("Parsed line {l:03} to range {range:?}");
+                ranges.push(range);
             } else if !line.is_empty() {
                 let id = line.parse::<u64>()
                     .expect(&format!("Failed to parse {} in line {} to u64", line, l));
@@ -83,14 +83,29 @@ impl Solution for Day05 {
             (merged_ranges, _) = merge_with(range, merged_ranges);
         }
 
-        for range in merged_ranges.clone() {
-            (merged_ranges, _) = merge_with(range, merged_ranges);
+        println!("{} ranges after merge:", merged_ranges.len());
+        for range in &merged_ranges {
+            println!("{range:?}")
         }
+
+        let mut total_merges;
+        do_while!{{
+            total_merges = 0;
+            for range in merged_ranges.clone() {
+                let merges;
+                (merged_ranges, merges) = merge_with(range, merged_ranges);
+                total_merges += merges;
+            }
+            println!("{} ranges after merge:", merged_ranges.len());
+            for range in &merged_ranges {
+                println!("{range:?}")
+            }
+        } while total_merges > 0}
 
         println!("Merged ranges:");
         for range in &merged_ranges {
             let len = range.1 - range.0 + 1;
-            println!("{len} ids in range {range:?}");
+            println!("{len:13} ids in range {range:?}");
             fresh_ids += len;
         }
 
@@ -103,60 +118,65 @@ pub(crate) fn in_range(num: u64, from: u64, to: u64) -> bool {
 }
 
 pub(crate) fn merge_with(range: Range, ranges: Vec<Range>) -> (Vec<Range>, u64) {
-    if ranges.is_empty() {
-        println!("No ranges to merge with, adding {range:?} to list");
-        return (vec![range], 0)
-    }
-
     let mut result: Vec<Range> = Vec::new();
     let mut range_merged = false;
     let mut merges = 0;
 
     for r in ranges {
-        print!("Merging range {range:?} with {r:?} -> ");
+        //println!("Merging range {range:?} with {r:?}");
 
+        // ranges sind identisch
+        if range.0 == r.0 && range.1 == r.1 {
+            if range_merged {
+                continue
+            } else {
+                println!("identical ranges");
+                result.push(r);
+                range_merged = true;
+            }
+        }
         // range ist komplett in r
-        if range.0 >= r.0 && range.1 <= r.1 {
-            println!("{range:?} fully inside {r:?}");
+        else if range.0 >= r.0 && range.1 <= r.1 {
+            //println!("{range:?} fully inside {r:?}");
             result.push(r);
             range_merged = true;
             merges += 1;
-            break
         }
         // r ist komplett in range
         else if r.0 >= range.0 && r.1 <= range.1 {
-            println!("{r:?} fully inside {range:?}");
+            //println!("{r:?} fully inside {range:?}");
             result.push(range);
             range_merged = true;
             merges += 1;
-            break
         }
         // range.0 ist innerhalb von r und range.1 liegt über r
         else if range.0 >= r.0 && range.0 <= r.1 && range.1 > r.1 {
-            println!("{range:?}.0 inside {r:?} and {range:?}.1 > {r:?}");
+            println!("{range:?} + {r:?} --> ({} to {})", r.0, range.1);
             result.push(Range(r.0, range.1));
             range_merged = true;
             merges += 1;
         }
         // range.0 liegt unter r und range.1 ist innerhalb von r
         else if range.0 < r.0 && range.1 >= r.0 && range.1 <= r.1 {
-            println!("{range:?}.1 inside {r:?} and {range:?}.0 < {r:?}");
+            println!("{range:?} + {r:?} --> ({} to {})", range.0, r.1);
             result.push(Range(range.0, r.1));
             range_merged = true;
             merges += 1;
         }
         // else: range und r haben keine Schnittmenge, also nur r adden
         else {
-            println!("{range:?} and {r:?} have no intersection");
+            //println!("no intersection, adding {r:?}");
             result.push(r);
         }
     }
 
     // wenn range mit keiner anderen range gemerged wurde, füge range extra hinzu
     if !range_merged {
-        println!("{range:?} is completely unique, adding it to the list of ranges");
+        //println!("{range:?} is completely unique, adding it to the list of ranges");
         result.push(range);
     }
+
+    println!("Number of ranges in result: {}", result.len());
 
     (result, merges)
 }
