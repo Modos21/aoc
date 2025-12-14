@@ -94,7 +94,7 @@ impl Solution for Day07 {
         let col_len = diagram[0].len();
         let curr_pos: (usize, usize) = (0, source_pos);
 
-        let paths = calc_paths(&diagram, curr_pos, (row_len, col_len));
+        let paths = calc_paths_iter(&diagram, curr_pos, (row_len, col_len));
 
         println!("#paths = {paths}");
 
@@ -136,9 +136,12 @@ pub(crate) fn calc_splits(diagram: &mut Diagram, mut pos: (usize, usize), lens: 
     splits
 }
 
+/// Calculates the number of paths you can take from the source under the assumption that at
+/// every splitter you can choose to go left or right
+///
+/// Caution: this method works recursively and is insanely slow for larger inputs
+/// Time complexity: O(2^N) where N is the number of lines in the input
 pub(crate) fn calc_paths(diagram: &Diagram, mut pos: (usize, usize), lens: (usize, usize)) -> u64 {
-    let mut paths = 1;
-
     while pos.0 < lens.0 {
         match &diagram[pos.0][pos.1] {
             Splitter => {
@@ -154,8 +157,7 @@ pub(crate) fn calc_paths(diagram: &Diagram, mut pos: (usize, usize), lens: (usiz
                     r = calc_paths(&diagram, (pos.0, pos.1 + 1), lens);
                 }
 
-                paths = l + r;
-                break;
+                return l + r
             },
             Empty | Source => {
                 pos.0 += 1;
@@ -163,8 +165,91 @@ pub(crate) fn calc_paths(diagram: &Diagram, mut pos: (usize, usize), lens: (usiz
             _ => {}
         }
     }
-    
-    paths
+
+    1
+}
+
+pub(crate) fn calc_paths_iter(diagram: &Diagram, start: (usize, usize), lens: (usize, usize)) -> u64 {
+    let rows = lens.0;
+    let cols = lens.1;
+    if start.0 >= rows || start.1 >= cols {
+        return 0;
+    }
+
+    let mut memo: Vec<Vec<Option<u64>>> = vec![vec![None; cols]; rows];
+    // stack: (row, col, processed_flag)
+    let mut stack: Vec<(usize, usize, bool)> = Vec::new();
+    stack.push((start.0, start.1, false));
+
+    while let Some((r, c, processed)) = stack.pop() {
+        if r >= rows || c >= cols {
+            continue;
+        }
+
+        // already computed
+        if memo[r][c].is_some() {
+            continue;
+        }
+
+        if processed {
+            // children must be computed now
+            let val = match diagram[r][c] {
+                Splitter => {
+                    let mut sum: u64 = 0;
+                    if c > 0 {
+                        if let Some(v) = memo[r][c - 1] {
+                            sum = sum.saturating_add(v);
+                        }
+                    }
+                    if c + 1 < cols {
+                        if let Some(v) = memo[r][c + 1] {
+                            sum = sum.saturating_add(v);
+                        }
+                    }
+                    sum
+                }
+                Empty | Source => {
+                    if r + 1 >= rows {
+                        1
+                    } else {
+                        memo[r + 1][c].unwrap_or(0)
+                    }
+                }
+                _ => 0,
+            };
+            memo[r][c] = Some(val);
+        } else {
+            // first time visit: either resolve immediate base cases or push children then self (processed)
+            match diagram[r][c] {
+                Empty | Source => {
+                    if r + 1 >= rows {
+                        memo[r][c] = Some(1);
+                    } else {
+                        // ensure child computed first
+                        stack.push((r, c, true));
+                        if memo[r + 1][c].is_none() {
+                            stack.push((r + 1, c, false));
+                        }
+                    }
+                }
+                Splitter => {
+                    // push self (processed) after children
+                    stack.push((r, c, true));
+                    if c + 1 < cols && memo[r][c + 1].is_none() {
+                        stack.push((r, c + 1, false));
+                    }
+                    if c > 0 && memo[r][c - 1].is_none() {
+                        stack.push((r, c - 1, false));
+                    }
+                }
+                _ => {
+                    memo[r][c] = Some(0);
+                }
+            }
+        }
+    }
+
+    memo[start.0][start.1].unwrap_or(0)
 }
 
 fn print_diagram(d: &Diagram) {
