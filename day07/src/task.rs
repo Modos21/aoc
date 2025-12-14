@@ -88,14 +88,15 @@ impl Solution for Day07 {
     }
 
     fn part_two(input: Self::ParsedInput) -> Option<Self::ResultType> {
-        let mut diagram = input.0;
-
+        let diagram = input.0;
         let source_pos = diagram[0].binary_search(&Source).unwrap();
         let row_len = diagram.len();
         let col_len = diagram[0].len();
         let curr_pos: (usize, usize) = (0, source_pos);
 
-        let paths = calc_paths();
+        let paths = calc_paths(&diagram, curr_pos, (row_len, col_len));
+
+        println!("#paths = {paths}");
 
         Some(paths)
     }
@@ -135,8 +136,35 @@ pub(crate) fn calc_splits(diagram: &mut Diagram, mut pos: (usize, usize), lens: 
     splits
 }
 
-pub(crate) fn calc_paths() -> u64 {
-    todo!()
+pub(crate) fn calc_paths(diagram: &Diagram, mut pos: (usize, usize), lens: (usize, usize)) -> u64 {
+    let mut paths = 1;
+
+    while pos.0 < lens.0 {
+        match &diagram[pos.0][pos.1] {
+            Splitter => {
+                let mut l = 0;
+                let mut r = 0;
+
+                // if there is space on the left, check for splits in that adjacent column
+                if pos.1 > 0 {
+                    l = calc_paths(&diagram, (pos.0, pos.1 - 1), lens);
+                }
+                // if there is space on the right, check for splits in that adjacent column
+                if pos.1 < lens.1 {
+                    r = calc_paths(&diagram, (pos.0, pos.1 + 1), lens);
+                }
+
+                paths = l + r;
+                break;
+            },
+            Empty | Source => {
+                pos.0 += 1;
+            },
+            _ => {}
+        }
+    }
+    
+    paths
 }
 
 fn print_diagram(d: &Diagram) {

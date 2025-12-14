@@ -4,5 +4,5 @@ use framework::{run, Part, Solution};
 mod task;
 
 fn main() {
-    run!(Day07, part1);
+    run!(Day07, part2);
 }
