@@ -1,3 +1,8 @@
+use crate::task::Day06;
+use framework::{run, Part, Solution};
+
+mod task;
+
 fn main() {
-    println!("Hello, world!");
+    run!(Day06, part2);
 }
