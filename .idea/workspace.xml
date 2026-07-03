@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="aoc" targetName="aoc" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G &quot;Visual Studio 17 2022&quot;" />
+    </configurations>
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/rust/Cargo.toml">
+      <package file="$PROJECT_DIR$/rust/day01">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day02">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day03">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day04">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day05">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day06">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day07">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day08">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day09">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day10">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day11">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/day12">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/rust/framework">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d29ffc74-b50b-4aa2-92ba-62c5db7f185c" name="Changes" comment="started day08">
+      <change afterPath="$PROJECT_DIR$/C++/day01/input/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C++/day01/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aoc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aoc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.Toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/test/test1.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/test/test2.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/test/test3.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/test/test4.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/test/test1.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/test/test1.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/test/test2.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/test/test1.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/test/test2.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/test/test3.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/test/test4.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test1.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test10.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test2.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test3.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test4.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test5.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test6.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test7.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test8.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/test/test9.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/src/task.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day10/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day10/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day10/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day11/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day11/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day11/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12/input/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day12/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/lib.rs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/RustroverProjects/aoc" value="36ZX63lomOZVrHMGLckUYR4Snpa" />
+    </persistenceIdMap>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Modos21&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Modos21/aoc.git&quot;,
+    &quot;accountId&quot;: &quot;7ab503c9-56f1-4134-ada8-21687fc2dae0&quot;
+  }
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="ba0NZa8Q" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2026" />
+    <option name="minorVersion" value="1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="36ZX63lomOZVrHMGLckUYR4Snpa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "CMake Application.aoc.executor": "Run",
+    "Cargo.Build day01.executor": "Run",
+    "Cargo.Run day01.executor": "Run",
+    "Cargo.Run day02.executor": "Run",
+    "Cargo.Run day03.executor": "Run",
+    "Cargo.Run day04.executor": "Run",
+    "Cargo.Run day05.executor": "Run",
+    "Cargo.Run day06.executor": "Run",
+    "Cargo.Run day07.executor": "Run",
+    "Cargo.Run day08.executor": "Run",
+    "Cargo.Test lib.executor": "Run",
+    "Cargo.Test lib::tests.executor": "Run",
+    "Cargo.Test tests::test (1).executor": "Run",
+    "Cargo.Test tests::test.executor": "Run",
+    "Cargo.Test tests::test_.executor": "Run",
+    "Cargo.Test tests::test_3x3_matrix.executor": "Run",
+    "Cargo.Test tests::test_file1 (1).executor": "Run",
+    "Cargo.Test tests::test_file1.executor": "Run",
+    "Cargo.Test tests::test_file10_part2.executor": "Run",
+    "Cargo.Test tests::test_file1_part2.executor": "Run",
+    "Cargo.Test tests::test_file2.executor": "Run",
+    "Cargo.Test tests::test_file2_part1.executor": "Run",
+    "Cargo.Test tests::test_file2_part2.executor": "Run",
+    "Cargo.Test tests::test_file3.executor": "Run",
+    "Cargo.Test tests::test_file3_part2.executor": "Run",
+    "Cargo.Test tests::test_file4.executor": "Run",
+    "Cargo.Test tests::test_file4_part2.executor": "Run",
+    "Cargo.Test tests::test_file5_part2.executor": "Run",
+    "Cargo.Test tests::test_file6_part2.executor": "Run",
+    "Cargo.Test tests::test_file7_part2.executor": "Run",
+    "Cargo.Test tests::test_file8_part2.executor": "Run",
+    "Cargo.Test tests::test_file9_part2.executor": "Run",
+    "Cargo.Test tests::test_file_1 (1).executor": "Run",
+    "Cargo.Test tests::test_file_1.executor": "Run",
+    "Cargo.Test tests::test_set.executor": "Run",
+    "Cargo.Test tests::test_set_filter.executor": "Run",
+    "Cargo.Test tests::test_set_local_var.executor": "Run",
+    "Cargo.Test tests::test_set_map_filter.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/RustroverProjects/aoc/C++/day01/input",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\RustroverProjects\aoc\C++\day01\input" />
+      <recent name="D:\RustroverProjects\aoc\day12" />
+      <recent name="D:\RustroverProjects\aoc\day11" />
+      <recent name="D:\RustroverProjects\aoc\day10" />
+      <recent name="D:\RustroverProjects\aoc\day09" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\RustroverProjects\aoc\C++\day01" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.aoc">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aoc" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc" TARGET_NAME="aoc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc" RUN_TARGET_NAME="aoc">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build day01" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="build --package day01 --lib" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/rust" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run day01" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="run --package day01 --bin day01" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/rust" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run day02" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="run --package day02 --bin day02" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/rust" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::test (1)" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package day08 --lib -- tests::test --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::test_set" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="buildProfileId" value="test" />
+      <option name="command" value="test --package framework --lib -- tests::test_set --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$/rust" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Cargo.Build day01" />
+      <item itemvalue="Cargo.Run day01" />
+      <item itemvalue="Cargo.Run day02" />
+      <item itemvalue="Cargo.Test tests::test (1)" />
+      <item itemvalue="Cargo.Test tests::test_set" />
+      <item itemvalue="CMake Application.aoc" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.Run day02" />
+        <item itemvalue="Cargo.Run day01" />
+        <item itemvalue="Cargo.Build day01" />
+        <item itemvalue="Cargo.Run day01" />
+        <item itemvalue="Cargo.Build day01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d29ffc74-b50b-4aa2-92ba-62c5db7f185c" name="Changes" comment="" />
+      <created>1765214888703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765214888703</updated>
+      <workItem from="1765214890013" duration="19876000" />
+      <workItem from="1765236219220" duration="60000" />
+      <workItem from="1765282063662" duration="7521000" />
+      <workItem from="1765308380541" duration="19421000" />
+      <workItem from="1765331912971" duration="11000" />
+      <workItem from="1765389564485" duration="593000" />
+      <workItem from="1765473083175" duration="352000" />
+      <workItem from="1765661332848" duration="203000" />
+      <workItem from="1765661604750" duration="19374000" />
+      <workItem from="1765722871188" duration="17026000" />
+      <workItem from="1765746716525" duration="4305000" />
+      <workItem from="1765793556441" duration="22000" />
+      <workItem from="1765831937105" duration="40000" />
+      <workItem from="1766336188956" duration="1030000" />
+      <workItem from="1766443779131" duration="701000" />
+      <workItem from="1767373065537" duration="680000" />
+      <workItem from="1767396066943" duration="6667000" />
+      <workItem from="1768160916095" duration="13000" />
+      <workItem from="1769330544122" duration="56000" />
+      <workItem from="1777663277881" duration="630000" />
+      <workItem from="1783078285356" duration="2220000" />
+      <workItem from="1783080791409" duration="234000" />
+    </task>
+    <task id="LOCAL-00001" summary="added crates for other days">
+      <option name="closed" value="true" />
+      <created>1765235317541</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235317541</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added inspection profile to .idea/gitignore">
+      <option name="closed" value="true" />
+      <created>1765235331838</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235331838</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changed file extension to txt">
+      <option name="closed" value="true" />
+      <created>1765235347442</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235347442</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finished framework for all days">
+      <option name="closed" value="true" />
+      <created>1765235369060</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235369060</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactored tests">
+      <option name="closed" value="true" />
+      <created>1765235383397</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235383397</updated>
+    </task>
+    <task id="LOCAL-00006" summary="renamed res folder to test folder">
+      <option name="closed" value="true" />
+      <created>1765235402982</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235402982</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactored day01">
+      <option name="closed" value="true" />
+      <created>1765235452702</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235452702</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created crates for upcoming days">
+      <option name="closed" value="true" />
+      <created>1765235491891</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235491891</updated>
+    </task>
+    <task id="LOCAL-00009" summary="renamed res folder to test folder">
+      <option name="closed" value="true" />
+      <created>1765235503038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235503038</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changed file extension to txt">
+      <option name="closed" value="true" />
+      <created>1765235722761</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235722761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="optimized imports">
+      <option name="closed" value="true" />
+      <created>1765235732282</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235732282</updated>
+    </task>
+    <task id="LOCAL-00012" summary="started empty implementation">
+      <option name="closed" value="true" />
+      <created>1765235745645</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235745645</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactored day 2">
+      <option name="closed" value="true" />
+      <created>1765235758241</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235758241</updated>
+    </task>
+    <task id="LOCAL-00014" summary="started day 4 main">
+      <option name="closed" value="true" />
+      <created>1765235771443</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235771443</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactored day 2">
+      <option name="closed" value="true" />
+      <created>1765235790312</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235790312</updated>
+    </task>
+    <task id="LOCAL-00016" summary="todo: refactor">
+      <option name="closed" value="true" />
+      <created>1765235797066</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765235797066</updated>
+    </task>
+    <task id="LOCAL-00017" summary="changed clone to as_res">
+      <option name="closed" value="true" />
+      <created>1765285846800</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765285846800</updated>
+    </task>
+    <task id="LOCAL-00018" summary="day03 refactor">
+      <option name="closed" value="true" />
+      <created>1765289037720</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765289037720</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added removal of BOM for testfile contents">
+      <option name="closed" value="true" />
+      <created>1765324288656</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1765324288656</updated>
+    </task>
+    <task id="LOCAL-00020" summary="solved day04">
+      <option name="closed" value="true" />
+      <created>1765324305453</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1765324305453</updated>
+    </task>
+    <task id="LOCAL-00021" summary="finished day05 part1, debugging part2">
+      <option name="closed" value="true" />
+      <created>1765324327011</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1765324327011</updated>
+    </task>
+    <task id="LOCAL-00022" summary="finished day05 part 2">
+      <option name="closed" value="true" />
+      <created>1765662910868</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1765662910868</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added crates for the remaining days">
+      <option name="closed" value="true" />
+      <created>1765663016198</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1765663016198</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added back the 2 spaces at the end of the file">
+      <option name="closed" value="true" />
+      <created>1765679508306</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1765679508306</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added run macro">
+      <option name="closed" value="true" />
+      <created>1765679519673</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1765679519673</updated>
+    </task>
+    <task id="LOCAL-00026" summary="finished day 6">
+      <option name="closed" value="true" />
+      <created>1765681217690</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1765681217690</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added input for day 7">
+      <option name="closed" value="true" />
+      <created>1765682016927</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1765682016927</updated>
+    </task>
+    <task id="LOCAL-00028" summary="solved day 7 part 1">
+      <option name="closed" value="true" />
+      <created>1765734978348</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1765734978348</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added tests for part 2, but the main input takes extremely long (might be correct though?)">
+      <option name="closed" value="true" />
+      <created>1765738926095</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1765738926095</updated>
+    </task>
+    <task id="LOCAL-00030" summary="solved part 2 iteratively (running took only a few ms)">
+      <option name="closed" value="true" />
+      <created>1765747978373</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1765747978373</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added framework dep to remaining days">
+      <option name="closed" value="true" />
+      <created>1765748910399</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1765748910399</updated>
+    </task>
+    <task id="LOCAL-00032" summary="started day08">
+      <option name="closed" value="true" />
+      <created>1765748924455</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1765748924455</updated>
+    </task>
+    <task id="LOCAL-00033" summary="started day08">
+      <option name="closed" value="true" />
+      <created>1765793570804</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1765793570804</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.in" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="refactored day01" />
+    <MESSAGE value="created crates for upcoming days" />
+    <MESSAGE value="renamed res folder to test folder" />
+    <MESSAGE value="changed file extension to txt" />
+    <MESSAGE value="optimized imports" />
+    <MESSAGE value="started empty implementation" />
+    <MESSAGE value="started day 4 main" />
+    <MESSAGE value="refactored day 2" />
+    <MESSAGE value="todo: refactor" />
+    <MESSAGE value="changed clone to as_res" />
+    <MESSAGE value="day03 refactor" />
+    <MESSAGE value="added removal of BOM for testfile contents" />
+    <MESSAGE value="solved day04" />
+    <MESSAGE value="finished day05 part1, debugging part2" />
+    <MESSAGE value="finished day05 part 2" />
+    <MESSAGE value="added crates for the remaining days" />
+    <MESSAGE value="added back the 2 spaces at the end of the file" />
+    <MESSAGE value="added run macro" />
+    <MESSAGE value="finished day 6" />
+    <MESSAGE value="added input for day 7" />
+    <MESSAGE value="solved day 7 part 1" />
+    <MESSAGE value="added tests for part 2, but the main input takes extremely long (might be correct though?)" />
+    <MESSAGE value="solved part 2 iteratively (running took only a few ms)" />
+    <MESSAGE value="added framework dep to remaining days" />
+    <MESSAGE value="started day08" />
+    <option name="LAST_COMMIT_MESSAGE" value="started day08" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CargoCommandRunConfiguration">
+        <watch expression="input" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
